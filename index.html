@@ -15,7 +15,7 @@ liff.init({
 liffId: "1657303791-OdyzKeVp"
 }).then(() => { // 初期化完了. 以降はLIFF SDKの各種メソッドを利用できる
   //アクセストークン
-  const token = liff.getAccessToken()
+  const token = liff.getIDToken()
   document.querySelector("#token").innerText = token
   
 // 利用者のLINEアカウントのプロフィール名を取得
