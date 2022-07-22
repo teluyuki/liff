@@ -8,6 +8,10 @@
 <div>Hello <span id="name">world</span>.</div>
     <span id="token"></span>
     <button id="button">クリック</button>
+    <form style="display: none" action="https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/" method="POST" id="form">
+  <input type="hidden" id="var1" name="var1" value=""/>
+  <input type="hidden" id="var2" name="var2" value=""/>
+</form>
     <script>
 // LIFFの初期化を行う
 window.onload = function() {
@@ -37,7 +41,8 @@ function buttonClick(){
     var request = new XMLHttpRequest();
  
    //window.location.href = 'http://35.76.159.69:8081/WebOpac/webopac/index.do';
-     window.location.href = 'https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/';
+     $("#var1").val(token);
+     $("#form").submit();
 }
 </script>
   </body>
