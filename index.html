@@ -44,9 +44,28 @@ document.querySelector("#name").innerText = name
 function buttonClick(){
 
     　
-  $.getJSON('https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/', function(data){
-                   $("#name).innerHTML({data.key3})
-  });
+const xhr = new XMLHttpRequest();
+
+// リクエスト
+xhr.open("GET", 'https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/);
+
+//リクエスト送信
+xhr.send();
+
+// 自動的に呼ばれる関数
+xhr.onreadystatechange = function () {
+    // readyState XMLHttpRequest の状態 4: リクエストが終了して準備が完了
+    // status httpステータス
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        // jsonをオブジェクトに変更
+        const jsonObj = JSON.parse(xhr.responseText);
+
+        for (let item of jsonObj) {
+            console.log("id: " + item.id + " title: " + item.title + " completed: " + item.completed);
+        }
+
+    }
+}
      //$("#var1").val(token);
   
   //const obj1 = JSON.parse(json1);
