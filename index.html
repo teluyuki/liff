@@ -7,7 +7,7 @@
   <body onload="alert('ページの読み込みが完了したよ！');">
 <div>Hello <span id="name">world</span>.</div>
     <span id="token"></span>
-    <?!= include('js2'); ?>
+    <button id="button">クリック</button>
     <script>
 // LIFFの初期化を行う
 window.onload = function() {
@@ -28,9 +28,15 @@ const name = profile.displayName
 document.querySelector("#name").innerText = name
 })
 })
-    const config = {'token':token}
+}
+</script>
+    <input type="button" value="button" onclick="buttonClick()">
+
+<script>
+function buttonClick(){
+        const config = {"token":token}
   // fetchでAPIを叩く
-  fetch('https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/', config)
+  fetch("https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/", config)
 }
 </script>
   </body>
