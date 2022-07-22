@@ -34,9 +34,9 @@ document.querySelector("#name").innerText = name
 
 <script>
 function buttonClick(){
-        const config = {"token":token}
-  // fetchでAPIを叩く
-  fetch("https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/", config)
+    var request = new XMLHttpRequest();
+ 
+    request.open('GET', 'https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default?token=' + token, true);
 }
 </script>
   </body>
