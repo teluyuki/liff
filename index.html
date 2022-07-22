@@ -44,12 +44,9 @@ document.querySelector("#name").innerText = name
 function buttonClick(){
 
     　
-const url = 'https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/';
-fetch(url).then(function(response) {
-  return response.text();
-}).then(function(text) {
-  console.log(text);
-});
+  $.getJSON('https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/', function(data){
+                   $("#name).innerHTML({data.key3})
+  });
      //$("#var1").val(token);
   
   //const obj1 = JSON.parse(json1);
