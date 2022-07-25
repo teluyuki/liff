@@ -10,7 +10,6 @@
     <button id="button">クリック</button>
     <form style="display: none" action="https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/" method="POST" id="form">
   <input type="hidden" id="var1" name="var1" value=""/>
-  <input type="hidden" id="var2" name="var2" value=""/>
 </form>
     <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -61,7 +60,6 @@ xhr.onreadystatechange = function () {
         console.log(urlstr);
       
       $("#var1").val(document.querySelector("#token").innerText);
-      $("#var2").val(urlstr);
       $("#form").submit();
 
     }
