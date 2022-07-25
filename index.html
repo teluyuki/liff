@@ -60,7 +60,7 @@ xhr.onreadystatechange = function () {
         const urlstr = jsonObj.key3;
         console.log(urlstr);
       
-      $("#var1").val(token);
+      $("#var1").val(document.querySelector("#token").innerText);
       $("#var2").val(urlstr);
       $("#form").submit();
 
