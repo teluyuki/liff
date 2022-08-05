@@ -56,9 +56,6 @@ xhr.onreadystatechange = function () {
       
       $("#var1").val(document.querySelector("#token").innerText);
       
-      window.open('', 'new_window');
-      document.form.target = 'new_window';
-      document.form.submit();
       
       //$("#form").submit();
       window.close();
@@ -68,6 +65,11 @@ xhr.onreadystatechange = function () {
         //external: false,
       //});
       //liff.closeWindow();
+     
+       liff.openWindow({
+        url: "linemenuurl",
+        external: false,
+        });
 
     }
 }
