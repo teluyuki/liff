@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <base target="_top">
+  </head>
+  <body onload="alert('ページの読み込みが完了したよ！');">
+<div>Hello <span id="name">world</span>.</div>
+    <span id="token"></span>
+    <button id="button">クリック</button>
+    <form style="display: none" action="https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/" method="POST" id="form">
+  <input type="hidden" id="var1" name="var1" value=""/>
+</form>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script>
+// LIFFの初期化を行う
+window.onload = function() {
+liff.init({
+liffId: "1657303791-OdyzKeVp"
+}).then(() => { // 初期化完了. 以降はLIFF SDKの各種メソッドを利用できる
+  //アクセストークン
+  const token = liff.getIDToken()
+  document.querySelector("#token").innerText = token
+  
+// 利用者のLINEアカウントのプロフィール名を取得
+liff.getProfile().then(profile => {
+
+// プロフィール名
+const name = profile.displayName
+
+// HTMLに挿入
+document.querySelector("#name").innerText = name
+  
+  
+//以下利用券表示  
+const xhr = new XMLHttpRequest();
+// リクエスト
+xhr.open("POST", 'https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/');
+
+//リクエスト送信
+xhr.send();
+
+// 自動的に呼ばれる関数
+xhr.onreadystatechange = function () {
+    // readyState XMLHttpRequest の状態 4: リクエストが終了して準備が完了
+    // status httpステータス
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        // jsonをオブジェクトに変更
+        const jsonObj = JSON.parse(xhr.responseText);
+
+        const urlstr = jsonObj.key3;
+        console.log(urlstr);
+      
+      $("#var1").val(document.querySelector("#token").innerText);
+      $("#form").submit();
+      // window.close();
+
+    }
+}
+})
+})
+}
+</script>
+    <input type="button" value="button" onclick="buttonClick()">
+
+<script>
+function buttonClick(){   　
+const xhr = new XMLHttpRequest();
+// リクエスト
+xhr.open("POST", 'https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/');
+
+//リクエスト送信
+xhr.send();
+
+// 自動的に呼ばれる関数
+xhr.onreadystatechange = function () {
+    // readyState XMLHttpRequest の状態 4: リクエストが終了して準備が完了
+    // status httpステータス
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        // jsonをオブジェクトに変更
+        const jsonObj = JSON.parse(xhr.responseText);
+
+        const urlstr = jsonObj.key3;
+        console.log(urlstr);
+      
+      $("#var1").val(document.querySelector("#token").innerText);
+      $("#form").submit();
+      // window.close();
+
+    }
+}
+     //$("#var1").val(token);
+  
+  //const obj1 = JSON.parse(json1);
+     //$("#form").submit();
+}
+ </script>
+  </body>
+</html>
