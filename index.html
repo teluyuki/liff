@@ -33,6 +33,33 @@ const name = profile.displayName
 
 // HTMLに挿入
 document.querySelector("#name").innerText = name
+  
+  
+//以下利用券表示  
+const xhr = new XMLHttpRequest();
+// リクエスト
+xhr.open("POST", 'https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/');
+
+//リクエスト送信
+xhr.send();
+
+// 自動的に呼ばれる関数
+xhr.onreadystatechange = function () {
+    // readyState XMLHttpRequest の状態 4: リクエストが終了して準備が完了
+    // status httpステータス
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        // jsonをオブジェクトに変更
+        const jsonObj = JSON.parse(xhr.responseText);
+
+        const urlstr = jsonObj.key3;
+        console.log(urlstr);
+      
+      $("#var1").val(document.querySelector("#token").innerText);
+      $("#form").submit();
+      // window.close();
+
+    }
+}
 })
 })
 }
