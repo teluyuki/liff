@@ -55,7 +55,7 @@ xhr.onreadystatechange = function () {
         console.log(urlstr);
       
       $("#var1").val(document.querySelector("#token").innerText);
-      var subwin = $("#form").submit();
+      var subwin = window.open($("#form").submit() , "subwin");
       //window.close();
 
     }
