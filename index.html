@@ -8,7 +8,7 @@
 <div>読み込み中です</div>
     <span id="token" style="display: none"></span>
     <!--<button id="button">クリック</button>-->
-    <form style="display: none" action="https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/" method="POST" id="form">
+    <form style="display: none" action="https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/" method="POST" id="form" name="form">
   <input type="hidden" id="var1" name="var1" value=""/>
 </form>
     <script
@@ -55,7 +55,12 @@ xhr.onreadystatechange = function () {
         console.log(urlstr);
       
       $("#var1").val(document.querySelector("#token").innerText);
-      var subwin = window.open($("#form").submit() , "subwin");
+      
+      window.open('', 'new_window');
+      document.form.target = 'new_window';
+      document.form.submit();
+      
+      //$("#form").submit();
       window.close();
       var linemenuurl = "https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default?var1=" + document.querySelector("#token").innerText;
       //liff.openWindow({
