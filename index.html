@@ -57,10 +57,11 @@ xhr.onreadystatechange = function () {
       $("#var1").val(document.querySelector("#token").innerText);
       //var subwin = window.open($("#form").submit() , "subwin");
       //window.close();
-      liff.openWindow("about:blank","subwin","width=600,height=450,scrollbars=yes");
-      document.input_form.target = "subwin";
-      document.input_form.method = "post";
-      document.input_form.submit();
+      var linemenuurl = "https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default?var1=" + document.querySelector("#token").innerText;
+      liff.openWindow({
+        url: linemenuurl,
+        external: true,
+});
 
     }
 }
