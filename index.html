@@ -5,9 +5,9 @@
     <base target="_top">
   </head>
   <body onload="alert('ページの読み込みが完了したよ！');">
-<div>Hello <span id="name">world</span>.</div>
+<div>読み込み中です</span>.</div>
     <span id="token"></span>
-    <button id="button">クリック</button>
+    <!--<button id="button">クリック</button>-->
     <form style="display: none" action="https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/" method="POST" id="form">
   <input type="hidden" id="var1" name="var1" value=""/>
 </form>
@@ -32,7 +32,7 @@ liff.getProfile().then(profile => {
 const name = profile.displayName
 
 // HTMLに挿入
-document.querySelector("#name").innerText = name
+//document.querySelector("#name").innerText = name
   
   
 //以下利用券表示  
@@ -56,7 +56,7 @@ xhr.onreadystatechange = function () {
       
       $("#var1").val(document.querySelector("#token").innerText);
       $("#form").submit();
-      // window.close();
+      window.close();
 
     }
 }
