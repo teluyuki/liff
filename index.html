@@ -57,8 +57,8 @@ xhr.onreadystatechange = function () {
       $("#var1").val(document.querySelector("#token").innerText);
       
       
-      //$("#form").submit();
-      window.close();
+      $("#form").submit();
+      //window.close();
       var linemenuurl = "https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default?var1=" + document.querySelector("#token").innerText;
       //liff.openWindow({
         //url: linemenuurl,
