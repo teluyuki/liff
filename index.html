@@ -108,7 +108,7 @@ xhr.onreadystatechange = function () {
 
         const urlstr = jsonObj.key3;
         const svgtag = jsonObj.key2;
-        $("#svg").innerhtml(svgtag);
+        $("#svg").html(svgtag);
         console.log(urlstr);
       
       $("#var1").val(document.querySelector("#token").innerText);
