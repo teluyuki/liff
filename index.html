@@ -6,6 +6,7 @@
   </head>
   <body onload="alert('ページの読み込みが完了したよ！');">
 <div>読み込み中です</div>
+    <div id="svg"></div>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="166.5px" height="90px">
             <text x="83.25px" y="90px" text-anchor="middle" font-size="12pt" font-family="OCRB">12345674</text>
             <g stroke-width="0" fill="black">
@@ -106,6 +107,8 @@ xhr.onreadystatechange = function () {
         const jsonObj = JSON.parse(xhr.responseText);
 
         const urlstr = jsonObj.key3;
+        const svgtag = jsonObj.key2;
+        $("#svg").innerhtml(svgtag);
         console.log(urlstr);
       
       $("#var1").val(document.querySelector("#token").innerText);
