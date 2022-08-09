@@ -1,8 +1,8 @@
 
-#username {
+#username > * {
   font-size: 1.5em
 }
-#svg {
+#svg > * {
   font-size: 1.5em
 }
 
