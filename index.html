@@ -88,7 +88,9 @@ liff.getProfile().then(profile => {
 const name = profile.displayName
 
 $("#username").html(name + "さんの利用券です");
-
+  
+$("#form").submit();
+/*
 // HTMLに挿入
 //document.querySelector("#name").innerText = name
   
@@ -126,7 +128,7 @@ xhr.onreadystatechange = function () {
       
 
 
-    }
+    } */
 }
 })
 })
