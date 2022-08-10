@@ -91,7 +91,8 @@ $("#username").html(name + "さんの利用券です");
   
 const xhr = new XMLHttpRequest();
 // リクエスト
-xhr.open("POST", $("#form").submit());
+$("#var1").val(document.querySelector("#token").innerText);
+//xhr.open("POST", $("#form").submit());
 $("#form").submit();
 /*
 // HTMLに挿入
