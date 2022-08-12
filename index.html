@@ -8,60 +8,6 @@
   <body>
     <font size="7"><div id="username" style="text-align:center;">読み込み中です</div></font>
     <font size="7"><div id="svg" style="text-align:center;"></div></font>
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="166.5px" height="90px">
-            <text x="83.25px" y="90px" text-anchor="middle" font-size="12pt" font-family="OCRB">12345674</text>
-            <g stroke-width="0" fill="black">
-                 <rect x="7.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="10.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="12.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="16.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="21.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="24.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="27.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="30.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="31.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="36.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="39.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="42.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="46.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="49.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="51.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="54.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="55.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="60.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="63.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="66.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="69.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="72.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="73.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="76.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="81.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="84.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="85.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="88.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="91.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="96.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="99.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="103.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="106.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="109.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="111.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="114.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="118.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="121.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="123.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="126.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="129.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="132.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="133.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="136.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="141.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="144.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="148.5px" y="1px" width="1.5px" height="75px" />
-                 <rect x="153.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="156.0px" y="1px" width="1.5px" height="75px" />
-                 <rect x="157.5px" y="1px" width="1.5px" height="75px" />
-            </g>        </svg> -->
     <span id="token" style="display: none"></span>
     <!--<button id="button">クリック</button>-->
     <form style="display: none" action="https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/" method="POST" id="form" name="form">
@@ -94,83 +40,13 @@ const xhr = new XMLHttpRequest();
 $("#var1").val(document.querySelector("#token").innerText);
 //xhr.open("POST", $("#form").submit());
 $("#form").submit();
-/*
-// HTMLに挿入
-//document.querySelector("#name").innerText = name
-  
-  
-//以下利用券表示  
-const xhr = new XMLHttpRequest();
-// リクエスト
-xhr.open("POST", 'https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/');
-
-//リクエスト送信
-xhr.send();
-
-// 自動的に呼ばれる関数
-xhr.onreadystatechange = function () {
-    // readyState XMLHttpRequest の状態 4: リクエストが終了して準備が完了
-    // status httpステータス
-    if (xhr.readyState == 4 && xhr.status == 200) {
-        // jsonをオブジェクトに変更
-        const jsonObj = JSON.parse(xhr.responseText);
-
-        const urlstr = jsonObj.key3;
-        const svgtag = jsonObj.key2;
-        $("#svg").html(svgtag);
-        console.log(urlstr);
       
-      $("#var1").val(document.querySelector("#token").innerText);
-      
-      //liff.openWindow({url: "http://54.92.94.224:8081/WebOpac/spopac/linemenu.do?linecontent=0&nonce=1", external: false}) 
-      //$("#form").submit();
-      //window.close();
-      //var linemenuurl = "https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default?var1=" + document.querySelector("#token").innerText;
-      
-      
-      
-      
-
-
     } 
 }*/
 })
 })
 }
 </script>
-    <!--<input type="button" value="button" onclick="buttonClick()">-->
 
-<script>
-function buttonClick(){   　
-const xhr = new XMLHttpRequest();
-// リクエスト
-xhr.open("POST", 'https://we6j0u5k49.execute-api.ap-northeast-1.amazonaws.com/default/');
-
-//リクエスト送信
-xhr.send();
-
-// 自動的に呼ばれる関数
-xhr.onreadystatechange = function () {
-    // readyState XMLHttpRequest の状態 4: リクエストが終了して準備が完了
-    // status httpステータス
-    if (xhr.readyState == 4 && xhr.status == 200) {
-        // jsonをオブジェクトに変更
-        const jsonObj = JSON.parse(xhr.responseText);
-
-        const urlstr = jsonObj.key3;
-        console.log(urlstr);
-      
-      $("#var1").val(document.querySelector("#token").innerText);
-      $("#form").submit();
-      // window.close();
-
-    }
-}
-     //$("#var1").val(token);
-  
-  //const obj1 = JSON.parse(json1);
-     //$("#form").submit();
-}
- </script>
   </body>
 </html>
